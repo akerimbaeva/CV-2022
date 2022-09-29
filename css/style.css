@@ -236,8 +236,14 @@ h2 {
 }
 
 @media (max-width: 450px) {
+
     .profile-heading {
         font-size: 40px;
+    }
+
+    .nav-list {
+        padding: 100px 30px;
+
     }
 
 }
