@@ -13,16 +13,15 @@ h2 {
 }
 
 .container {
-      max-width: 1440px;
+      max-width: 100%;
       margin: 0 auto;
+      background-color: #d1af96;
   }
 
 
   /* Header */
 
   .nav {
-    background-color: #d1af96;
-    height: 100px;
     align-items: center;
   }
 
@@ -49,6 +48,27 @@ h2 {
     color: #fefefe;
 }
 
+.menu-nav {
+    display: none;
+    margin-left: 85vw;
+    background: url(../img/menu.png);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  
+
+  .close-img {
+    display: none;
+    background: url(../img/close.png);
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin: 32px 0;
+    cursor: pointer;
+  }
+
 
 /* Main */
 
@@ -58,15 +78,19 @@ h2 {
 
 .left-wrapper {
     background-color: #fefefe;
-    flex-basis: 33%;
+    width: 40%;
     padding: 4%;
     align-items: center;
 }
 
 .profile-image {
-      height: 240px;
-      width: 240px;
+      height: 200px;
+      width: 200px;
       margin-bottom: 10px;
+  }
+
+  .profile-name-desktop {
+    display: none;
   }
 
 
@@ -77,12 +101,11 @@ h2 {
 
 .right-wrapper {
     background-color: #f5efec;
-    flex-basis: 67%;
+    width: 60%;
     padding: 4%;
 }
 
 .profile-heading {
-    text-transform: uppercase; 
     font-size: 60px;
     color: #413129;
     margin-bottom: 0;
@@ -96,11 +119,12 @@ h2 {
 
 .projects-link {
     text-decoration: none;
-    color: #413129;
+    color: blue;
 }
 
 .projects-link:hover{
     color: #d1af96;
+    text-decoration: underline;
 }
 
 .about-me-section,
@@ -135,8 +159,78 @@ h2 {
     color: white;
 }
 
-.rsschool-logo {
-    width: 140px;
-    height: 140px;
-    padding-left: 50px;
+
+
+@media (max-width: 768px) {
+
+    .container {
+        padding-top: 42px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .menu-nav {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        overflow:hidden;
+        width: 60%;
+        background-color: #e7c7b1;
+        padding: 100px;
+        padding-bottom: 50px;
+        margin-top: -20px;
+        transition: ease 0.5s;
+        /* height: 100vw; */
+      }
+
+      .nav-link {
+        padding: 0;
+
+      }
+
+      .close-img {
+        display: inline-block;
+        position: absolute;
+        top: 42px;
+        right: 25px;
+      } 
+  
+      .open {
+        display: flex;
+      }
+
+      .profile-name {
+        display: none;
+      }
+
+      .profile-name-desktop {
+        display: block;
+      }
+
+      .main-wrapper {
+        display: block;
+        text-align: center;
+      }
+
+      .main-wrapper li {
+        list-style: none;
+      }
+
+      .left-wrapper {
+        width: 100%;
+      }
+
+      .right-wrapper {
+        width: 100%;
+      }
+
 }
